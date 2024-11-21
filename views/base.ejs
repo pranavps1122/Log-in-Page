@@ -1,29 +1,22 @@
 <%-include('header')-%>
 
 <div class="text-center center-div" id="login">
-    <div class="container w-25 border py-5">
+    <div class="container w-25 border py-5 rounded-botto">
         <div class="title pb-5">
             <h2 class="font-weight-bold">Login System</h2> 
-            <% if(locals.log){%>
-                <div class="alert alert-danger text-center">
-                   <%=log%>
-                </div>
-                <%}%>
-
-            <span>Log in for the existing user</span>
+            <% if(locals.logout){%>
+                    <div class="alert alert-success text-center">
+                        <%= logout %>
+                    </div>
+                <% } %>
            
+               <%if(locals.alert){%>
             
-            <% if (locals.logout) { %>
-                <div class="alert alert-success text-center">
-                    <%= logout %>
-                </div>
-            <% } %>
-            
-            <% if (locals.error) { %>
                 <div class="alert alert-danger text-center">
-                    <%= error %>
+                    <%= alert %>
                 </div>
             <% } %>
+            
         </div>
         <form action="/route/login" method="POST" class="pt-3">
             <div class="form-group">
@@ -33,9 +26,11 @@
             <div class="form-group">
                 <input type="password" class="form-control" name="password" placeholder="password" required>
             </div>
-            <button type="submit" class="btn btn-success rounded-pill">Submit</button>
+            <button type="submit" class="btn btn-success rounded-bottom mt-5">Submit</button>
         </form>
     </div>
 </div>
+\
+
 
 <%-include('footer')-%>

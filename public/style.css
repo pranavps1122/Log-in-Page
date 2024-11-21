@@ -7,6 +7,8 @@ body{
 
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
     
 }
 .center-div{
@@ -14,7 +16,8 @@ body{
 }
 .btn.btn-success{
     padding: .4rem 2rem;
-    margin-top: 15px;
+   
+   
 }
 form{
     padding: 0 3rem;
@@ -22,4 +25,10 @@ form{
 }
 #login.title>span{
     font-size: .8rem;
+}
+a{
+    text-decoration: none;
+}
+.btn-1{
+    background-color: black;
 }
