@@ -46,6 +46,8 @@ app.get('/',(req,res) => {
 })
 
 
+
+
 app.get('/dashboard',(req,res)=>{
     if(req.session.user){
         res.render("dashboard",{user:req.session.user})
